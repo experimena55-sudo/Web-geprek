@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"content="width=device-width, initial-scale=1.0">
+    <title>Ayam Geprek Juara - Pedasnya Bikin Nagih!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        utama: '#E53E3E', // Merah Pedas
+                        kuning: '#FBBF24', // Kuning Emas
+                        hijau: '#16A34A', // Hijau Sambal Ijo
+                        gelap: '#1F2937',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        judul: ['Poppins', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto { content-visibility: auto; }
+            .bayangan-kuat { filter: drop-shadow(0 8px 16px rgba(0,0,0,0.25)); }
+            .teks-bayangan { text-shadow: 0 2px 4px rgba(0,0,0,0.3); }
+            .gerak-naik { animation: naik 2s ease-in-out infinite alternate; }
+            @keyframes naik { 0% {transform: translateY(0);} 100% {transform: translateY(-8px);} }
+            .gradasi-merah { background: linear-gradient(135deg, #E53E3E 0%, #C53030 100%); }
+            .gradasi-hijau { background: linear-gradient(135deg, #16A34A 0%, #15803D 100%); }
+            .gradasi-kuning { background: linear-gradient(135deg, #FBBF24 0%, #F59E0B 100%); }
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;900&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-50 overflow-x-hidden">
+
+    <!-- HEADER / BANNER UTAMA -->
+    <header class="w-full h-screen relative flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1626645738963-20988e8886c8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                 alt="Ayam Geprek Enak" class="w-full h-full object-cover brightness-50">
+        </div>
+
+        <div class="container mx-auto px-4 z-10 text-center">
+            <h1 class="text-[clamp(2.5rem,8vw,5rem)] font-judul font-black text-kuning teks-bayangan mb-4 gerak-naik">
+                🍗 AYAM GEPREK JUARA
+            </h1>
+            <p class="text-[clamp(1.2rem,3vw,2rem)] text-white font-semibold teks-bayangan mb-8 max-w-3xl mx-auto">
+                Ada Sambal Merah & Sambal Ijo! <br> Renyah, Gurih, Pedasnya Nendang Banget!
+            </p>
+            <div class="flex flex-wrap gap-4 justify-center">
+                <a href="#menu" class="gradasi-kuning text-gelap font-bold px-8 py-4 rounded-full text-lg hover:scale-105 transition-transform bayangan-kuat">
+                    📑 LIHAT MENU
+                </a>
+                <a href="#pesan" class="gradasi-merah text-white font-bold px-8 py-4 rounded-full text-lg hover:scale-105 transition-transform bayangan-kuat">
+                    📲 PESAN SEKARANG
+                </a>
+            </div>
+        </div>
+
+        <div class="absolute bottom-0 w-full h-20 bg-gradient-to-t from-gray-50 to-transparent"></div>
+    </header>
+
+    <!-- KEUNGGULAN -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-[clamp(1.8rem,5vw,3rem)] font-judul font-bold text-center text-gelap mb-12">
+                ✅ KENAPA HARUS PILIH KITA?
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                <div class="text-center p-6 rounded-2xl bg-red-50 hover:shadow-lg transition-shadow">
+                    <div class="w-20 h-20 gradasi-merah rounded-full flex items-center justify-center text-white text-3xl mx-auto mb-4">
+                        🌶️
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">2 Pilihan Sambal</h3>
+                    <p class="text-gray-600">Ada Sambal Merah (Pedas Nampol) & Sambal Ijo (Segar Sedap), semua diulek cobek asli!</p>
+                </div>
+
+                <div class="text-center p-6 rounded-2xl bg-yellow-50 hover:shadow-lg transition-shadow">
+                    <div class="w-20 h-20 gradasi-kuning rounded-full flex items-center justify-center text-white text-3xl mx-auto mb-4">
+                        🍗
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">Ayam Besar & Renyah</h3>
+                    <p class="text-gray-600">Daging tebal, kulit krispi sampai ke tulang, dimasak pas matangnya!</p>
+                </div>
+
+                <div class="text-center p-6 rounded-2xl bg-green-50 hover:shadow-lg transition-shadow">
+                    <div class="w-20 h-20 gradasi-hijau rounded-full flex items-center justify-center text-white text-3xl mx-auto mb-4">
+                        💸
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">Harga Murah Meriah</h3>
+                    <p class="text-gray-600">Rasa Bintang Lima, Harga Kaki Lima! Mulai Rp 10.000 aja.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DAFTAR MENU -->
+    <section id="menu" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-[clamp(1.8rem,5vw,3rem)] font-judul font-bold text-center text-gelap mb-4">
+                📑 DAFTAR MENU & HARGA
+            </h2>
+            <p class="text-center text-gray-600 mb-12">*Bisa request pedas: Sedang - Sangat Pedas - Ekstra Pedas!</p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                
+                <!-- MENU 1 - Sambal Merah -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all hover:-translate-y-2">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1604909052743-94e838986d24?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                             alt="Ayam Geprek Sambal Merah" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-xl text-gelap mb-1">Ayam Geprek Sambal Merah</h3>
+                        <p class="text-gray-500 text-sm mb-3">Nasi + Ayam Krispi + Sambal Bawang Merah Ulek + Lalapan</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-utama text-lg">Rp 12.000</span>
+                            <span class="bg-utama/10 text-utama px-3 py-1 rounded-full text-xs">Pedas Nampol 🌶️🌶️🌶️</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MENU 2 - Sambal Ijo -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all hover:-translate-y-2">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1631515247142-e97f553a7d4c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                             alt="Ayam Geprek Sambal Ijo" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-xl text-gelap mb-1">Ayam Geprek Sambal Ijo</h3>
+                        <p class="text-gray-500 text-sm mb-3">Nasi + Ayam Krispi + Sambal Hijau Segar + Timun & Kol</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-hijau text-lg">Rp 12.000</span>
+                            <span class="bg-hijau/10 text-hijau px-3 py-1 rounded-full text-xs">Segar Sedap 🥬</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MENU 3 - Campur / Spesial -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all hover:-translate-y-2">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1598103926465-3229811c997f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                             alt="Ayam Geprek Spesial" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-xl text-gelap mb-1">Ayam Geprek Campur Merah+Ijo</h3>
+                        <p class="text-gray-500 text-sm mb-3">Nasi + Ayam Besar + 2 Jenis Sambal + Tahu Tempe</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-kuning text-lg">Rp 15.000</span>
+                            <span class="bg-kuning/20 text-amber-700 px-3 py-1 rounded-full text-xs">Paling Laris 🔥</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="mt-12 text-center max-w-md mx-auto bg-white p-4 rounded-xl shadow">
+                <h3 class="font-bold text-lg mb-2">🥤 Tambahan Minuman</h3>
+                <ul class="text-gray-700 space-y-1">
+                    <li>✅ Es Teh Manis / Tawar — Rp 3.000</li>
+                    <li>✅ Es Jeruk Segar — Rp 4.000</li>
+                    <li>✅ Es Kelapa Muda — Rp 5.000</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONI -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-[clamp(1.8rem,5vw,3rem)] font-judul font-bold text-center text-gelap mb-12">
+                💬 KATA MEREKA YANG SUDAH COBA
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+                <div class="bg-gray-50 p-6 rounded-2xl border-l-4 border-utama shadow-md">
+                    <div class="flex text-kuning text-xl mb-2">
+                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                    </div>
+                    <p class="text-gray-700 italic mb-3">"Sambal merahnya pedas nampol, sambal ijunya seger banget! Ayamnya garing bgt, harga ramah di kantong!"</p>
+                    <p class="font-bold text-sm">— annur kendari</p>
+                </div>
+
+                <div class="bg-gray-50 p-6 rounded-2xl border-l-4 border-hijau shadow-md">
+                    <div class="flex text-kuning text-xl mb-2">
+                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i>
+                    </div>
+                    <p class="text-gray-700 italic mb-3">"Paling suka yg sambal ijo, seger ga bikin enek. Bungkus rapi, nasi hangat terus. Langganan deh!"</p>
+                    <p class="font-bold text-sm">— Pak Budi, Pegawai</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PESAN SEKARANG -->
+    <section id="pesan" class="py-20 gradasi-merah text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-[clamp(1.8rem,5vw,3rem)] font-judul font-bold mb-6 teks-bayangan">
+                📲 MAU PESAN? MUDAH BANGET!
+            </h2>
+            <p class="text-lg mb-8 max-w-2xl mx-auto opacity-95">
+                Bisa pesan lewat WhatsApp, Ojol, atau datang langsung. <br> Buka Setiap Hari: <b>09.00 - 21.00 WITA</b>
+            </p>
+
+            <div class="flex flex-wrap gap-4 justify-center mb-10">
+                <a href="https://wa.me/6282296999557?text=Halo+Kak,+mau+pesan+Ayam+Geprek+dong!+Sambal+apa+aja+ada?" target="_blank" 
+                   class="bg-white text-utama font-bold px-8 py-4 rounded-full text-lg hover:scale-105 transition-transform bayangan-kuat flex items-center gap-2">
+                    <i class="fa fa-whatsapp text-2xl"></i> PESAN VIA WA: 0822-9699-9557
+                </a>
+                <a href="#" class="bg-kuning text-gelap font-bold px-8 py-4 rounded-full text-lg hover:scale-105 transition-transform bayangan-kuat">
+                    🛵 GOFOOD / GRABFOOD
+                </a>
+            </div>
+
+            <div class="bg-white/20 backdrop-blur-md p-5 rounded-xl max-w-md mx-auto">
+                <p class="font-bold text-lg mb-1">📍 LOKASI KAMI</p>
+                <p>Jl.poros haluoleh, kendari,sulawasi tenggara </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gelap text-white py-8 text-center">
+        <p class="text-xl font-judul font-bold mb-2">🍗 AYAM GEPREK JUARA</p>
+        <p class="text-gray-400 text-sm">© 2026 - Ada Sambal Merah & Ijo | WA: 0822-9699-9557</p>
+    </footer>
+
+</body>
+</html>
